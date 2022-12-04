@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    /* Colors */
+    --dark-cyan:hsl(185, 75%, 39%);
+    --very-dark-desaturated-blue:hsl(229, 23%, 23%);
+    --dark-grayish-blue:hsl(227, 10%, 46%);
+    --dark-gray:hsl(0, 0%, 59%);
+    --white : hsl(0, 0%, 100%);
+    /* Typography */
+    --font-family:'Kumbh Sans';
+    --font-size:18px;
+
+    /* modifiers */
+    --card-radius:1rem;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: var(--dark-cyan);
+    /* To make the backround with SVGS like in design : */
+    background-image: url(/images/bg-pattern-top.svg),url(/images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat, no-repeat;
+    /* this is very important. background-position: space_from_left space_from_top */
+    background-position:right 45vw bottom 25vh,left 45vw top 45vh;
+}
+
+/* card container */
+.profile-container{
+    width: 100%;
+    background-color: white;
+    border-radius: var(--card-radius);
+    box-shadow: 6px 6px 100px rgb(110, 110, 110);
+}
+
+/* Header image */
+.profile-header-image{
+    width: 100%;
+   
+}
+
+.profile-header-image>img{
+    width: 100%;
+    border-top-left-radius: var(--card-radius);
+    border-top-right-radius: var(--card-radius);
+}
+
+.profile-info{
+  
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-info>img{
+    border-radius: 50%;
+    height: 5rem;
+    width: 5rem;
+    border: 3px solid var(--white);
+    margin-top:-3rem;
+    
+}
+
+.profile-details{
+    padding-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    
+}
+
+.profile-details>*{
+    font-family: var(--font-family);
+}
+
+#location{
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    color: var(--dark-gray);
+}
+
+.stats{
+    display: flex;
+    justify-content: space-around;
+    font-family:var(--font-family);
+    padding: 2rem;
+}
+
+.stat{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat>span{
+    color: var(--dark-gray);
+}
+
+hr{
+    border: 1px solid var(--very-dark-desaturated-blue);
+    opacity: 0.2;
+}
+
+@media(min-width:600px){
+    body{
+        padding: 0;
+        background-position: right 50vw bottom 50vh,left 50vw top 50vh;
+    }
+    .profile-container{
+        width: 30%;
+        background-color: white;
+        border-radius: var(--card-radius);
+        box-shadow: 6px 6px 200px rgb(110, 110, 110);
+    }
+    
+}
